@@ -5,7 +5,7 @@ import Quiz from "./components/Quiz";
 import Results from "./components/Results";
 import "./App.css";
 
-export default function App() {
+function App() {
   const { t } = useTranslation();
   return (
     <div className="App">
@@ -17,3 +17,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;

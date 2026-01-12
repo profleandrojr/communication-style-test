@@ -10,3 +10,50 @@
     padding: 10px;
   }
 }
+
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.progress {
+  height: 10px;
+  background: #eee;
+  margin-bottom: 20px;
+}
+
+.progress > div {
+  height: 100%;
+  background: #007bff;
+  transition: width 0.3s;
+}
+
+.statements {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.statement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .statement {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .statement select {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
