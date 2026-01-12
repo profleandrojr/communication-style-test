@@ -48,7 +48,41 @@ i18n
               greenish:
                 "-Greenish (predominant style flourishes in analysis or study)",
             },
-            // Add more based on PDF combos, e.g., 'red-bluish': '...'
+            results: {
+              title: "Your Communication Style",
+              red: {
+                title: "Red (Action-Oriented)",
+                description:
+                  "You are direct, results-focused, and productive. You thrive on challenges and quick decisions.",
+              },
+              blue: {
+                title: "Blue (People-Oriented)",
+                description:
+                  "You are empathetic, relationship-focused, and enjoy teamwork. You value harmony and helping others.",
+              },
+              green: {
+                title: "Green (Idea-Oriented)",
+                description:
+                  "You are analytical, thoughtful, and creative. You prefer reflection, planning, and innovation.",
+              },
+              rainbow:
+                "Rainbow (Balanced) - You stay neutral in normal situations and adapt based on context.",
+              // Combos as full keys for easy lookup
+              "red-blue":
+                "Red-Bluish: Red predominates, but blue flourishes in team work where you feel comfortable.",
+              "red-green":
+                "Red-Greenish: Red predominates, but green flourishes in study or analysis situations, especially for defining processes.",
+              "green-red":
+                "Green-Reddish: Pragmatic, but red emerges under tension.",
+              "green-blue":
+                "Green-Bluish: Pragmatic, but blue flourishes in group work.",
+              "blue-red":
+                "Blue-Reddish: Blue predominates, but red emerges in tensions.",
+              "blue-green":
+                "Blue-Greenish: Blue predominates, but green flourishes in analysis or study.",
+              conclusion:
+                "No style is better than another; learn to adapt to others by speaking their language.",
+            },
             conclusion:
               "No style is better than another; learn to adapt to others by speaking their language.",
           },
