@@ -1,4 +1,3 @@
-// src/i18n.js
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
@@ -577,7 +576,6 @@ i18n
               "Ningún estilo es mejor que otro; aprende a adaptarte a los demás hablando su lenguaje.",
           },
           questions: {
-            // Use the exact Spanish from PDF/images – I already had them, but confirming with your images
             1: {
               text: "Yo prefiero hablar más de:",
               statements: [
@@ -586,8 +584,6 @@ i18n
                 "Las ideas, Reflexión, Pensamientos",
               ],
             },
-            // ... (omit for brevity, but add all 27 as in your previous questions.js)
-            // For example, question 27:
             27: {
               text: "La productividad y los resultados:",
               statements: [
