@@ -2,8 +2,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Results = () => {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const location = useLocation();
   const { answers } = location.state || { answers: [] }; // Fallback if no state
@@ -18,7 +20,15 @@ const Results = () => {
     { red: 0, blue: 0, green: 0 }
   );
 
-  // Determine style based on PDF logic
+  const handleRestart = () => {
+    // 1. Clear the storage
+    localStorage.removeItem("quizAnswers");
+    localStorage.removeItem("quizCurrentQuestion");
+
+    // 2. Navigate home
+    navigate("/");
+  };
+
   const scores = [
     { color: "red", score: totals.red },
     { color: "blue", score: totals.blue },
@@ -34,7 +44,7 @@ const Results = () => {
   } else {
     const primary = scores[0].color;
     const secondary = scores[1].color;
-    // Combo if secondary is close (e.g., within 30 points, based on PDF examples like 100/88)
+
     if (scores[0].score - scores[1].score <= 30) {
       styleKey = `${primary}-${secondary}`;
     } else {
@@ -64,9 +74,9 @@ const Results = () => {
         <p>Blue: {totals.blue}</p>
         <p>Green: {totals.green}</p>
       </div>
-      <Link to="/">
-        <button>{t("results.restart", "Restart Quiz")}</button>
-      </Link>
+      <button onClick={handleRestart}>
+        {t("results.restart", "Restart Quiz")}
+      </button>
     </div>
   );
 };

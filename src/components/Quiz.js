@@ -9,10 +9,25 @@ const Quiz = () => {
   const totalQuestions = 27;
   const scores = [0, 3, 7, 10];
 
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState(
-    Array(totalQuestions).fill({ red: null, blue: null, green: null })
-  );
+  // Lazy Initialize Current Question
+  const [currentQuestion, setCurrentQuestion] = useState(() => {
+    const saved = localStorage.getItem("quizCurrentQuestion");
+    return saved ? parseInt(saved, 10) : 0;
+  });
+
+  //  Lazy Initialize Answers
+  const [answers, setAnswers] = useState(() => {
+    const saved = localStorage.getItem("quizAnswers");
+    // If we have saved answers, parse them. Otherwise, generate the empty array.
+    return saved
+      ? JSON.parse(saved)
+      : Array(totalQuestions).fill({ red: null, blue: null, green: null });
+  });
+
+  React.useEffect(() => {
+    localStorage.setItem("quizAnswers", JSON.stringify(answers));
+    localStorage.setItem("quizCurrentQuestion", currentQuestion);
+  }, [answers, currentQuestion]);
 
   const questionKey = `questions.${currentQuestion + 1}`;
   const questionText = t(`${questionKey}.text`);
@@ -25,6 +40,14 @@ const Quiz = () => {
       [color]: parseInt(value),
     };
     setAnswers(newAnswers);
+  };
+
+  const isScoreTaken = (currentColor, scoreToCheck) => {
+    const currentAns = answers[currentQuestion];
+
+    return Object.keys(currentAns).some(
+      (key) => key !== currentColor && currentAns[key] === scoreToCheck
+    );
   };
 
   const isValid = () => {
@@ -69,18 +92,25 @@ const Quiz = () => {
         {["red", "blue", "green"].map((color, idx) => (
           <div key={idx} className="statement">
             <p>{statements[idx]}</p>
+
             <div className="score-buttons">
-              {scores.map((score) => (
-                <button
-                  key={score}
-                  className={`score-btn ${
-                    answers[currentQuestion][color] === score ? "selected" : ""
-                  }`}
-                  onClick={() => handleScoreChange(color, score)}
-                >
-                  {score}
-                </button>
-              ))}
+              {scores.map((s) => {
+                const isSelected = answers[currentQuestion][color] === s;
+                const isTaken = isScoreTaken(color, s);
+
+                return (
+                  <button
+                    key={s}
+                    className={`score-btn ${isSelected ? "selected" : ""} ${
+                      isTaken ? "disabled" : ""
+                    }`}
+                    onClick={() => handleScoreChange(color, s)}
+                    disabled={isTaken} // Prevents clicking duplicates
+                  >
+                    {s}
+                  </button>
+                );
+              })}
             </div>
           </div>
         ))}

@@ -14,7 +14,7 @@ const Welcome = () => {
     <div>
       <h1>{t("welcome.title")}</h1>
       <p>{t("welcome.subtitle")}</p>
-      <div style={{ marginBottom: "20px" }}>
+      <div className="welcome">
         <label>{t("welcome.language")}:</label>
         <select
           onChange={(e) => changeLanguage(e.target.value)}

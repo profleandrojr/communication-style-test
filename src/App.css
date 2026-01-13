@@ -1,3 +1,7 @@
+.welcome {
+  margin-bottom: 20px;
+}
+
 .App {
   text-align: center;
   padding: 20px;
@@ -64,32 +68,50 @@ button {
 
 .score-buttons {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center; /* Center them if you like, or remove to align left */
 }
 
 .score-btn {
-  padding: 1px 1px;
+  padding: 3px 6px;
+  color: #ccc;
   border: 1px dashed rgb(16, 22, 47);
-  background-color: #f8f9fa;
-  color: rgb(16, 22, 47);
-  border-radius: 4px;
+  background-color: white;
+  border-radius: 1px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
   transition: all 0.2s ease;
-  font-weight: black;
+  min-width: 36px;
 }
 
-.score-btn:hover {
-  border-color: rgb(16, 22, 47);
-  background-color: #f0f0f0;
+.score-btn:not(:disabled):hover {
+  border-color: #888;
+  background-color: #f9f9f9;
+  transform: translateY(-2px);
 }
 
 .score-btn.selected {
-  background-color: rgb(16, 22, 47);
-  color: #f8f9fa;
-  border-color: rgb(16, 22, 47);
-  transform: scale(1.05);
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+  box-shadow: 0 4px 6px rgba(16, 22, 47, 0.1);
+}
+
+.score-btn:disabled {
+  background-color: #eee;
+  color: #ccc;
+  border-color: #eee;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+@media (max-width: 600px) {
+  .score-btn {
+    min-width: 12px;
+    max-width: 48px;
+  }
 }
 
 .navigation {
@@ -100,7 +122,9 @@ button {
 
 @media (max-width: 600px) {
   .quiz-container h1 {
-    font-size: 27px;
+    font-size: 21px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
   }
 
   .statement {
