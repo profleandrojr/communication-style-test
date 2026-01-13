@@ -69,17 +69,19 @@ const Quiz = () => {
         {["red", "blue", "green"].map((color, idx) => (
           <div key={idx} className="statement">
             <p>{statements[idx]}</p>
-            <select
-              value={answers[currentQuestion][color] ?? ""}
-              onChange={(e) => handleScoreChange(color, e.target.value)}
-            >
-              <option value="">{t("quiz.selectScore", "Select")}</option>
-              {scores.map((s) => (
-                <option key={s} value={s}>
-                  {s}
-                </option>
+            <div className="score-buttons">
+              {scores.map((score) => (
+                <button
+                  key={score}
+                  className={`score-btn ${
+                    answers[currentQuestion][color] === score ? "selected" : ""
+                  }`}
+                  onClick={() => handleScoreChange(color, score)}
+                >
+                  {score}
+                </button>
               ))}
-            </select>
+            </div>
           </div>
         ))}
       </div>

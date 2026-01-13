@@ -52,27 +52,44 @@ button {
 .statements {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 32px auto;
+  align-items: normal;
+  margin: 32px;
   gap: 24px;
 }
 
 .statement {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.score-buttons {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 12px;
 }
 
-.statement p {
-  margin: auto 12px;
+.score-btn {
+  padding: 1px 1px;
+  border: 1px dashed rgb(16, 22, 47);
+  background-color: #f8f9fa;
+  color: rgb(16, 22, 47);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: black;
 }
 
-.statement option {
-  max-width: 44px;
+.score-btn:hover {
+  border-color: rgb(16, 22, 47);
+  background-color: #f0f0f0;
 }
 
-.statement select {
-  max-width: 78px;
+.score-btn.selected {
+  background-color: rgb(16, 22, 47);
+  color: #f8f9fa;
+  border-color: rgb(16, 22, 47);
+  transform: scale(1.05);
 }
 
 .navigation {
@@ -89,10 +106,7 @@ button {
   .statement {
     flex-direction: column;
     align-items: flex-start;
-  }
-  .statement select {
-    margin-top: 5px;
-    width: 100%;
+    margin: 0;
   }
 }
 
