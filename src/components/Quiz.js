@@ -59,16 +59,12 @@ const Quiz = () => {
 
   return (
     <div className="quiz-container">
-      <h1>{t("quiz.title", "Communication Style Quiz")}</h1>
+      <h1>{t("quiz.title", "Communication Style Quiz").toUpperCase()}</h1>
       <p>{t("quiz.instructions")}</p>
-      <div className="progress">
-        <div
-          style={{
-            width: `${((currentQuestion + 1) / totalQuestions) * 100}%`,
-          }}
-        ></div>
-      </div>
-      <h2>{`Question ${currentQuestion + 1}: ${questionText}`}</h2>
+      <h2>
+        {`Question ${currentQuestion + 1}`} <br /> {`${questionText}`}
+      </h2>
+
       <div className="statements">
         {["red", "blue", "green"].map((color, idx) => (
           <div key={idx} className="statement">
@@ -89,13 +85,20 @@ const Quiz = () => {
       </div>
       <div className="navigation">
         <button onClick={goPrevious} disabled={currentQuestion === 0}>
-          {t("quiz.previous")}
+          {t("quiz.previous").toUpperCase()}
         </button>
         <button onClick={goNext} disabled={!isValid()}>
           {currentQuestion === totalQuestions - 1
-            ? t("quiz.submit")
-            : t("quiz.next")}
+            ? t("quiz.submit").toUpperCase()
+            : t("quiz.next").toUpperCase()}
         </button>
+      </div>
+      <div className="progress">
+        <div
+          style={{
+            width: `${((currentQuestion + 1) / totalQuestions) * 100}%`,
+          }}
+        ></div>
       </div>
     </div>
   );

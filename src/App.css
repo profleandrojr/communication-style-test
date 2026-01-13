@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   padding: 20px;
-  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -11,28 +10,51 @@
   }
 }
 
+header {
+  min-height: 56px;
+  width: 100%;
+  border-bottom: 1px solid rgb(16, 22, 47);
+  margin-bottom: 24px;
+}
+
+header img {
+  max-width: 127px;
+}
+
+@media (max-width: 600px) {
+  header img {
+    max-width: 44px;
+  }
+}
+
+button {
+  color: #f8f9fa;
+  background-color: rgb(16, 22, 47);
+  font-style: bold;
+  width: 96px;
+  padding: 8px;
+  border-radius: 7%;
+}
+
 .quiz-container {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 4px;
+  border: 1px solid rgb(16, 22, 47);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
-.progress {
-  height: 10px;
-  background: #eee;
-  margin-bottom: 20px;
-}
-
-.progress > div {
-  height: 100%;
-  background: #007bff;
-  transition: width 0.3s;
+.quiz-container h1 {
+  border-bottom: 1px solid rgb(16, 22, 47);
+  margin: 12px auto;
 }
 
 .statements {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  margin: 32px auto;
+  gap: 24px;
 }
 
 .statement {
@@ -41,13 +63,29 @@
   align-items: center;
 }
 
+.statement p {
+  margin: auto 12px;
+}
+
+.statement option {
+  max-width: 44px;
+}
+
+.statement select {
+  max-width: 78px;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 @media (max-width: 600px) {
+  .quiz-container h1 {
+    font-size: 27px;
+  }
+
   .statement {
     flex-direction: column;
     align-items: flex-start;
@@ -56,6 +94,17 @@
     margin-top: 5px;
     width: 100%;
   }
+}
+
+.progress {
+  height: 12px;
+  margin: 20px;
+}
+
+.progress > div {
+  height: 100%;
+  background: rgb(16, 22, 47);
+  transition: width 0.3s;
 }
 
 .results-container {
@@ -83,4 +132,9 @@
   .scores {
     flex-direction: column;
   }
+}
+
+footer {
+  margin-top: 24px;
+  border-top: 1px solid rgb(16, 22, 47);
 }

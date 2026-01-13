@@ -26,7 +26,7 @@ const Welcome = () => {
         </select>
       </div>
       <Link to="/quiz">
-        <button>{t("welcome.start")}</button>
+        <button>{t("welcome.start").toUpperCase()}</button>
       </Link>
     </div>
   );
