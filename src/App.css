@@ -14,20 +14,86 @@
   }
 }
 
-header {
-  min-height: 56px;
-  width: 100%;
-  border-bottom: 1px solid rgb(16, 22, 47);
-  margin-bottom: 24px;
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa; /* Light grey background */
+  border-bottom: 2px solid #eaeaea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-header img {
-  max-width: 127px;
+/* Brand Section */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 50px; /* Limit logo size */
+  width: auto;
+  border-radius: 50%; /* Optional: Make it round */
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.lang-group {
+  display: flex;
+  gap: 4px;
+}
+
+.lang-group button {
+  padding: 1px;
+  margin: 0px 2px;
+  min-width: 48px;
+  max-width: 64px;
+  border: 1px solid rgb(16, 22, 47);
+  background: white;
+  color: rgb(16, 22, 47);
+  cursor: pointer;
+  border-radius: 1px;
+  font-size: 0.75rem;
+}
+
+.lang-group button.active {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+}
+
+.reset-btn {
+  background-color: transparent;
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+  padding: 5px 1px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.reset-btn:hover {
+  background-color: #ff6b6b;
+  color: white;
 }
 
 @media (max-width: 600px) {
-  header img {
-    max-width: 44px;
+  .app-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .lang-group button {
+    margin: 0 4px;
+    min-width: 44px;
+    max-width: 68px;
   }
 }
 
@@ -35,14 +101,15 @@ button {
   color: #f8f9fa;
   background-color: rgb(16, 22, 47);
   font-style: bold;
-  width: 96px;
+  min-width: 88px;
+  max-width: 127px;
   padding: 8px;
   border-radius: 7%;
 }
 
 .quiz-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 36px auto;
   padding: 4px;
   border: 1px solid rgb(16, 22, 47);
   background-color: rgba(255, 255, 255, 0.25);
