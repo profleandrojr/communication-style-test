@@ -10,89 +10,76 @@ i18n
       en: {
         translation: {
           welcome: {
-            title: "Your Communication Style",
+            title: "Communication & Negotiation Style",
             subtitle:
-              "Discover your style based on advanced negotiation techniques.",
+              "Discover your profile based on advanced negotiation techniques.",
             start: "Start Quiz",
             language: "Language",
           },
           quiz: {
             instructions:
-              "For each question, assign unique scores (0, 3, 7, 10) to the three statements based on how you think or feel. You cannot repeat scores or use all four.",
+              "For each question, assign unique scores (0, 3, 7, 10) to the three statements based on how you think or feel. You cannot repeat scores.",
             next: "Next",
             previous: "Previous",
             submit: "See Results",
+            selectScore: "Select",
           },
           results: {
-            title: "Your Communication Style",
+            title: "Your Profile",
+            restart: "Restart Quiz",
+            conclusion:
+              "No style is better than another; the key is adaptability (Situational Leadership).",
+
+            // --- UPDATED TERMINOLOGY (English) ---
             red: {
-              title: "Red (Action-Oriented)",
+              title: "Red: Hierarchical (Achievement Motivated)",
               description:
-                "You are direct, results-focused, and productive. You thrive on challenges and quick decisions.",
+                "You are direct, results-oriented, and productive. In negotiation, you focus on the 'What' and 'When'. You thrive on challenges and quick decisions.",
+              advice:
+                "Tip: Don't forget to build rapport. Use 'CPC' (Deep Customer Knowledge) to understand the other party's needs before pushing for a decision.",
             },
             blue: {
-              title: "Blue (People-Oriented)",
+              title: "Blue: Visionary (Affiliation Motivated)",
               description:
-                "You are empathetic, relationship-focused, and enjoy teamwork. You value harmony and helping others.",
+                "You are empathetic, relationship-focused, and value harmony. In negotiation, you focus on the 'Who' and 'How'. You build trust easily.",
+              advice:
+                "Tip: Watch out for giving away too much to keep the peace. Define your 'MAPAN' (BATNA) clearly before negotiating.",
             },
             green: {
-              title: "Green (Idea-Oriented)",
+              title: "Green: Pragmatic (Process Motivated)",
               description:
-                "You are analytical, thoughtful, and creative. You prefer reflection, planning, and innovation.",
+                "You are analytical, detail-oriented, and logical. In negotiation, you focus on the 'Why' and the Data. You prefer reflection and planning.",
+              advice:
+                "Tip: Analysis is essential, but avoid 'Analysis Paralysis'. Remember that emotions also play a role in decision making.",
             },
-            rainbow:
-              "Rainbow (Balanced) - You stay neutral in normal situations and adapt based on context.",
-            comboSuffix: {
-              reddish: "-Reddish (pragmatic, but red emerges under tension)",
-              bluish: "-Bluish (predominant style flourishes in team settings)",
-              greenish:
-                "-Greenish (predominant style flourishes in analysis or study)",
+            rainbow: {
+              title: "Rainbow: Situational Leader",
+              description:
+                "You are balanced and adapt your style to the context.",
+              advice:
+                "Tip: Use your adaptability to switch between 'Pushing for Results' and 'Building Relationships' as the situation demands.",
             },
-            results: {
-              title: "Your Communication Style",
-              red: {
-                title: "Red (Action-Oriented)",
-                description:
-                  "You are direct, results-focused, and productive. You thrive on challenges and quick decisions.",
-              },
-              blue: {
-                title: "Blue (People-Oriented)",
-                description:
-                  "You are empathetic, relationship-focused, and enjoy teamwork. You value harmony and helping others.",
-              },
-              green: {
-                title: "Green (Idea-Oriented)",
-                description:
-                  "You are analytical, thoughtful, and creative. You prefer reflection, planning, and innovation.",
-              },
-              rainbow:
-                "Rainbow (Balanced) - You stay neutral in normal situations and adapt based on context.",
-              // Combos as full keys for easy lookup
-              "red-blue":
-                "Red-Bluish: Red predominates, but blue flourishes in team work where you feel comfortable.",
-              "red-green":
-                "Red-Greenish: Red predominates, but green flourishes in study or analysis situations, especially for defining processes.",
-              "green-red":
-                "Green-Reddish: Pragmatic, but red emerges under tension.",
-              "green-blue":
-                "Green-Bluish: Pragmatic, but blue flourishes in group work.",
-              "blue-red":
-                "Blue-Reddish: Blue predominates, but red emerges in tensions.",
-              "blue-green":
-                "Blue-Greenish: Blue predominates, but green flourishes in analysis or study.",
-              conclusion:
-                "No style is better than another; learn to adapt to others by speaking their language.",
-            },
-            conclusion:
-              "No style is better than another; learn to adapt to others by speaking their language.",
+            // Combos
+            "red-blue":
+              "Red-Bluish: Hierarchical core, but Visionary skills flourish in teamwork.",
+            "red-green":
+              "Red-Greenish: Hierarchical core, but Pragmatic skills flourish in analysis.",
+            "green-red":
+              "Green-Reddish: Pragmatic core, but Hierarchical traits emerge under tension.",
+            "green-blue":
+              "Green-Bluish: Pragmatic core, but Visionary traits flourish in groups.",
+            "blue-red":
+              "Blue-Reddish: Visionary core, but Hierarchical traits emerge under tension.",
+            "blue-green":
+              "Blue-Greenish: Visionary core, but Pragmatic traits flourish in analysis.",
           },
           questions: {
             1: {
               text: "I prefer to talk more about:",
               statements: [
-                "Action, Results, Productivity", // red
-                "People, Relationships, Persons", // blue
-                "Ideas, Reflection, Thoughts", // green
+                "Action, Results, Productivity",
+                "People, Relationships, Persons",
+                "Ideas, Reflection, Thoughts",
               ],
             },
             2: {
@@ -203,7 +190,7 @@ i18n
               text: "Regarding commitment:",
               statements: [
                 "I commit to doing many things",
-                'I don\'t like saying "no" to people',
+                "I don't like saying 'no' to people",
                 "I commit according to my ideals",
               ],
             },
@@ -305,56 +292,76 @@ i18n
       pt: {
         translation: {
           welcome: {
-            title: "Seu Estilo de Comunicação",
+            title: "Estilo de Comunicação e Negociação",
             subtitle:
-              "Descubra seu estilo baseado em técnicas avançadas de negociação.",
+              "Descubra seu perfil baseado em técnicas avançadas de negociação.",
             start: "Iniciar Quiz",
             language: "Idioma",
           },
           quiz: {
             instructions:
-              "Para cada pergunta, atribua pontuações únicas (0, 3, 7, 10) às três afirmações com base em como você pensa ou sente. Você não pode repetir pontuações ou usar todas as quatro.",
+              "Para cada pergunta, atribua pontuações únicas (0, 3, 7, 10) às três afirmações. Você não pode repetir pontuações.",
             next: "Próximo",
             previous: "Anterior",
             submit: "Ver Resultados",
+            selectScore: "Selecionar",
           },
           results: {
-            title: "Seu Estilo de Comunicação",
+            title: "Seu Perfil",
+            restart: "Reiniciar Quiz",
+            conclusion:
+              "Nenhum estilo é melhor que o outro; a chave é a adaptabilidade (Liderança Situacional).",
+
+            // --- UPDATED TERMINOLOGY (Portuguese) ---
             red: {
-              title: "Vermelho (Orientado para Ação)",
+              title: "Vermelho: Hierárquico (Motivado por Conquistas)",
               description:
-                "Você é direto, focado em resultados e produtivo. Você prospera em desafios e decisões rápidas.",
+                "Você é direto, focado em resultados e produtivo. Na negociação, foca no 'O Quê' e 'Quando'. Prospera em desafios e decisões rápidas.",
+              advice:
+                "Dica: Não esqueça de construir rapport. Use o 'CPC' (Conhecimento Profundo do Cliente) para entender as necessidades do outro antes de pressionar.",
             },
             blue: {
-              title: "Azul (Orientado para Pessoas)",
+              title: "Azul: Visionário (Motivado por Filiação)",
               description:
-                "Você é empático, focado em relacionamentos e gosta de trabalho em equipe. Você valoriza harmonia e ajudar os outros.",
+                "Você é empático, focado em relacionamentos e valoriza a harmonia. Na negociação, foca no 'Quem' e 'Como'. Constrói confiança facilmente.",
+              advice:
+                "Dica: Cuidado para não ceder demais para manter a paz. Defina seu 'MAPAN' (Melhor Alternativa) claramente antes de negociar.",
             },
             green: {
-              title: "Verde (Orientado para Ideias)",
+              title: "Verde: Pragmático (Motivado por Processos)",
               description:
-                "Você é analítico, pensativo e criativo. Você prefere reflexão, planejamento e inovação.",
+                "Você é analítico, detalhista e lógico. Na negociação, foca no 'Porquê' e nos Dados. Prefere reflexão, planejamento e lógica.",
+              advice:
+                "Dica: A análise é essencial, mas evite a 'Paralisia por Análise'. Lembre-se que as emoções também jogam um papel na decisão.",
             },
-            rainbow:
-              "Arco-íris (Equilibrado) - Você permanece neutro em situações normais e se adapta com base no contexto.",
-            comboSuffix: {
-              reddish:
-                "-Vermelhado (pragmático, mas o vermelho surge sob tensão)",
-              bluish:
-                "-Azulado (estilo predominante floresce em configurações de equipe)",
-              greenish:
-                "-Verdeado (estilo predominante floresce em análise ou estudo)",
+            rainbow: {
+              title: "Arco-íris: Líder Situacional",
+              description:
+                "Você é equilibrado e adapta seu estilo ao contexto.",
+              advice:
+                "Dica: Use sua adaptabilidade para alternar entre 'Pressionar por Resultados' e 'Construir Relacionamentos' conforme a situação exige.",
             },
-            conclusion:
-              "Nenhum estilo é melhor que o outro; aprenda a se adaptar aos outros falando sua linguagem.",
+            // Combos
+            "red-blue":
+              "Vermelho-Azulado: Base Hierárquica, mas habilidades Visionárias florescem em equipe.",
+            "red-green":
+              "Vermelho-Esverdeado: Base Hierárquica, mas habilidades Pragmáticas florescem na análise.",
+            "green-red":
+              "Verde-Avermelhado: Base Pragmática, mas traços Hierárquicos surgem sob tensão.",
+            "green-blue":
+              "Verde-Azulado: Base Pragmática, mas traços Visionários florescem em grupos.",
+            "blue-red":
+              "Azul-Avermelhado: Base Visionária, mas traços Hierárquicos surgem sob tensão.",
+            "blue-green":
+              "Azul-Esverdeado: Base Visionária, mas traços Pragmáticos florescem na análise.",
           },
           questions: {
             1: {
               text: "Eu prefiro falar mais sobre:",
               statements: [
-                "Ação, Resultados, Produtividade", // red
-                "Pessoas, Relacionamentos, Pessoas", // blue
-                "Ideias, Reflexão, Pensamentos", // green
+                "Ação, Resultados, Produtividade",
+                "Pessoas, Relacionamentos, Pessoas",
+                "Ideias, Reflexão, Pensamentos",
               ],
             },
             2: {
@@ -465,7 +472,7 @@ i18n
               text: "Quanto ao compromisso:",
               statements: [
                 "Me comprometo a fazer muitas coisas",
-                'Não gosto de dizer "não" às pessoas',
+                "Não gosto de dizer 'não' às pessoas",
                 "De acordo com meus ideais me comprometo",
               ],
             },
@@ -567,55 +574,76 @@ i18n
       es: {
         translation: {
           welcome: {
-            title: "Tu Estilo de Comunicación",
+            title: "Estilo de Comunicación y Negociación",
             subtitle:
-              "Descubre tu estilo basado en técnicas avanzadas de negociación.",
+              "Descubre tu perfil basado en técnicas avanzadas de negociación.",
             start: "Iniciar Quiz",
             language: "Idioma",
           },
           quiz: {
             instructions:
-              "Para cada pregunta, asigna puntuaciones únicas (0, 3, 7, 10) a las tres afirmaciones según cómo piensas o sientes. No puedes repetir puntuaciones ni usar las cuatro.",
+              "Para cada pregunta, asigna puntuaciones únicas (0, 3, 7, 10) a las tres afirmaciones. No puedes repetir puntuaciones.",
             next: "Siguiente",
             previous: "Anterior",
             submit: "Ver Resultados",
+            selectScore: "Seleccionar",
           },
           results: {
-            title: "Tu Estilo de Comunicación",
+            title: "Tu Perfil",
+            restart: "Reiniciar Quiz",
+            conclusion:
+              "Ningún estilo es mejor que otro; la clave es la adaptabilidad (Liderazgo Situacional).",
+
+            // --- UPDATED TERMINOLOGY (Spanish - Source Material) ---
             red: {
-              title: "Rojo (Orientado a la Acción)",
+              title: "Rojo: Jerárquico (Motivado al Logro)",
               description:
-                "Eres directo, enfocado en resultados y productivo. Prosperas en desafíos y decisiones rápidas.",
+                "Eres directo, enfocado en resultados y productivo. En negociación, te enfocas en el 'Qué' y 'Cuándo'. Prosperas en desafíos y decisiones rápidas.",
+              advice:
+                "Tip: No olvides construir rapport. Usa el 'CPC' (Conocimiento Profundo del Cliente) para entender las necesidades del otro antes de presionar.",
             },
             blue: {
-              title: "Azul (Orientado a las Personas)",
+              title: "Azul: Visionario (Motivado a la Filiación)",
               description:
-                "Eres empático, enfocado en relaciones y disfrutas el trabajo en equipo. Valoras la armonía y ayudar a otros.",
+                "Eres empático, enfocado en relaciones y valoras la armonía. En negociación, te enfocas en el 'Quién' y 'Cómo'. Construyes confianza fácilmente.",
+              advice:
+                "Tip: Cuidado con ceder demasiado por mantener la paz. Define tu 'MAPAN' (Mejor Alternativa) claramente antes de negociar.",
             },
             green: {
-              title: "Verde (Orientado a las Ideas)",
+              title: "Verde: Pragmático (Motivado a Procesos)",
               description:
-                "Eres analítico, reflexivo y creativo. Prefieres la reflexión, planificación e innovación.",
+                "Eres analítico, detallista y lógico. En negociación, te enfocas en el 'Por qué' y los Datos. Prefieres la reflexión y planificación.",
+              advice:
+                "Tip: El análisis es esencial, pero evita la 'Parálisis por Análisis'. Recuerda que las emociones también juegan un rol en la decisión.",
             },
-            rainbow:
-              "Arcoíris (Equilibrado) - Permaneces neutral en situaciones normales y adaptas según el contexto.",
-            comboSuffix: {
-              reddish: "-Rojizo (pragmático, pero el rojo surge bajo tensión)",
-              bluish:
-                "-Azulado (estilo predominante florece en entornos de equipo)",
-              greenish:
-                "-Verdoso (estilo predominante florece en análisis o estudio)",
+            rainbow: {
+              title: "Arcoíris: Líder Situacional",
+              description:
+                "Eres equilibrado y adaptas tu estilo según el contexto.",
+              advice:
+                "Tip: Usa tu adaptabilidad para alternar entre 'Presionar por Resultados' y 'Construir Relaciones' según lo exija la situación.",
             },
-            conclusion:
-              "Ningún estilo es mejor que otro; aprende a adaptarte a los demás hablando su lenguaje.",
+            // Combos
+            "red-blue":
+              "Rojo-Azulado: Base Jerárquica, pero habilidades Visionarias florecen en equipo.",
+            "red-green":
+              "Rojo-Verdoso: Base Jerárquica, pero habilidades Pragmáticas florecen en análisis.",
+            "green-red":
+              "Verde-Rojizo: Base Pragmática, pero rasgos Jerárquicos surgen bajo tensión.",
+            "green-blue":
+              "Verde-Azulado: Base Pragmática, pero rasgos Visionarios florecen en grupos.",
+            "blue-red":
+              "Azul-Rojizo: Base Visionaria, pero rasgos Jerárquicos surgen bajo tensión.",
+            "blue-green":
+              "Azul-Verdoso: Base Visionaria, pero rasgos Pragmáticos florecen en análisis.",
           },
           questions: {
             1: {
               text: "Yo prefiero hablar más de:",
               statements: [
-                "La Acción, Resultados, Productividad", // red
-                "La Gente, Relaciones, Personas", // blue
-                "Las ideas, Reflexión, Pensamientos", // green
+                "La Acción, Resultados, Productividad",
+                "La Gente, Relaciones, Personas",
+                "Las ideas, Reflexión, Pensamientos",
               ],
             },
             2: {
@@ -635,7 +663,7 @@ i18n
               ],
             },
             4: {
-              text: "Pregunto a menudo",
+              text: "Pregunto a menudo:",
               statements: [
                 "¿Qué tengo que hacer?",
                 "¿Con quién voy a estar?",
@@ -726,7 +754,7 @@ i18n
               text: "En cuanto al compromiso:",
               statements: [
                 "Me comprometo hacer muchas cosas",
-                'No me gusta decir que "no" a la gente',
+                "No me gusta decir que 'no' a la gente",
                 "De acuerdo con mis ideales me comprometo",
               ],
             },
@@ -819,7 +847,7 @@ i18n
               statements: [
                 "Tengo que ser productivo o no estoy a gusto",
                 "Me interesa más la empatía y el trabajo en equipo",
-                "Me gusta diseñar sistemas productivos.",
+                "Me gusta diseñar sistemas productivos",
               ],
             },
           },
