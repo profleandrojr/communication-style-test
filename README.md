@@ -1,5 +1,7 @@
 # Communication & Negotiation Style Profile
 
+🔴 **Live Demo:** [Click here to take the Quiz](https://profleandrojr.github.io/communication-style-quiz/)
+
 An advanced interactive tool designed to help professionals identify their primary communication and negotiation style (**Hierarchical, Visionary, or Pragmatic**).
 
 Based on the **"Advanced Negotiation Techniques"** methodology, this application goes beyond simple personality tests by offering actionable business advice (BATNA/MAPAN, CPC) tailored to your specific profile.
