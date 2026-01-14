@@ -22,7 +22,7 @@ export default function Header() {
     <header className="app-header">
       <div className="brand" onClick={() => navigate("/")}>
         <img
-          src="/me-as-meme-glass.png"
+          src={process.env.PUBLIC_URL + "/me-as-meme-glass.png"}
           alt="Prof. Leandro Jr"
           className="logo"
         />

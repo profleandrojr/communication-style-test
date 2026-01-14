@@ -1,3 +1,4 @@
+// src/components/Results.js
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -8,6 +9,7 @@ const Results = () => {
   const navigate = useNavigate();
   const { answers } = location.state || { answers: [] };
 
+  // Handle case where user navigates directly without data
   if (!answers || answers.length === 0) {
     return (
       <div className="results-container">
@@ -18,6 +20,7 @@ const Results = () => {
     );
   }
 
+  // Calculate totals
   const totals = answers.reduce(
     (acc, ans) => ({
       red: acc.red + (ans.red || 0),
@@ -27,6 +30,7 @@ const Results = () => {
     { red: 0, blue: 0, green: 0 }
   );
 
+  // Determine style
   const scores = [
     { color: "red", score: totals.red },
     { color: "blue", score: totals.blue },
@@ -49,13 +53,18 @@ const Results = () => {
     }
   }
 
-  const primaryColor = styleKey.split("-")[0];
+  // Text Data
+  const primaryColor = styleKey.split("-")[0]; // "red", "blue", "green", or "rainbow"
   const primaryTitle = t(`results.${primaryColor}.title`);
   const primaryDesc = t(`results.${primaryColor}.description`);
-  const adviceText = t(`results.${primaryColor}.advice`);
+  const adviceText = t(`results.${primaryColor}.advice`); // The Pro Tip
   const comboDesc = styleKey.includes("-") ? t(`results.${styleKey}`) : "";
 
-  const imagePath = `/results/${primaryColor}.png`;
+  const isRainbow = primaryColor === "rainbow";
+
+  const imagePath = isRainbow
+    ? `${process.env.PUBLIC_URL}/me-as-meme-glass.png`
+    : `${process.env.PUBLIC_URL}/results/${primaryColor}.png`;
 
   const handleRestart = () => {
     localStorage.removeItem("quizAnswers");

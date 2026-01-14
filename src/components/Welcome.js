@@ -28,7 +28,7 @@ const Welcome = () => {
         {images.map((imgName, index) => (
           <img
             key={imgName}
-            src={`/results/${imgName}.png`}
+            src={`${process.env.PUBLIC_URL}/results/${imgName}.png`}
             alt={`${imgName} style illustration`}
             className={`carousel-image ${
               index === currentImageIndex ? "active" : ""
