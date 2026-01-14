@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Welcome from "./components/Welcome";
 import Quiz from "./components/Quiz";
 import Results from "./components/Results";
@@ -16,6 +16,7 @@ function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/results" element={<Results />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </div>

@@ -1,42 +1,59 @@
-# Communication Style Quiz
+# Communication & Negotiation Style Profile
 
-A React-based interactive quiz designed to help users identify their primary communication style (Red, Blue, Green, or Balanced) based on advanced negotiation techniques.
+An advanced interactive tool designed to help professionals identify their primary communication and negotiation style (**Hierarchical, Visionary, or Pragmatic**).
 
-## Features
+Based on the **"Advanced Negotiation Techniques"** methodology, this application goes beyond simple personality tests by offering actionable business advice (BATNA/MAPAN, CPC) tailored to your specific profile.
 
-- **Interactive Quiz:** 27 questions with a weighted scoring system (0, 3, 7, 10) to prevent neutral bias.
-- **Smart Analysis:** Calculates results based on Action (Red), People (Blue), and Idea (Green) orientations.
-- **Multi-language Support:** Fully localized in English, Portuguese (PT), and Spanish (ES).
-- **Data Persistence:** Automatically saves user progress to LocalStorage, allowing users to return without losing data.
-- **Responsive Design:** Optimized for both desktop and mobile devices.
+## 🚀 Features
 
-## Tech Stack
+- **Professional Profiling:** Categorizes users into Red (Hierarchical), Blue (Visionary), Green (Pragmatic), or Rainbow (Situational) styles.
+- **Dynamic Negotiation Tips:** Provides specific advice on concepts like **MAPAN** (Best Alternative to a Negotiated Agreement) and **CPC** (Deep Customer Knowledge) based on results.
+- **Smart Persistence:** Automatically saves progress to `LocalStorage`, preventing data loss during page refreshes.
+- **Multi-Language Support:** Fully localized for **English**, **Portuguese (PT)**, and **Spanish (ES)**.
+- **Responsive UX:** Features a smart header with global controls, an image carousel, and dynamic result visualizations.
 
-- **Core:** React.js (v19)
-- **Routing:** React Router DOM (v6)
-- **Internationalization:** i18next & react-i18next
-- **Styling:** CSS3 with Flexbox/Grid
+## 🧠 Methodology & Credits
 
-## Getting Started
+This project is based on the **Advanced Negotiation Techniques** framework developed by **Luis Gerald Riffo**.
 
-1.  **Install dependencies:**
+- **Red Style (Hierarchical):** Focus on Action, Results, and Speed.
+- **Blue Style (Visionary):** Focus on People, Relationships, and Harmony.
+- **Green Style (Pragmatic):** Focus on Ideas, Processes, and Analysis.
+
+_Special thanks to Luis Gerald Riffo for the methodology._
+
+## 🛠️ Tech Stack
+
+- **Core:** React 19
+- **Routing:** React Router v6
+- **State Management:** React Hooks + LocalStorage
+- **Internationalization:** i18next
+- **Styles:** CSS3 (Flexbox/Grid/Animations)
+
+## 📦 Getting Started
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone [https://github.com/profleandrojr/communication-style-quiz.git](https://github.com/profleandrojr/communication-style-quiz.git)
+    ```
+
+2.  **Install dependencies:**
 
     ```bash
     npm install
     ```
 
-2.  **Run the application:**
+3.  **Run the application:**
     ```bash
     npm start
     ```
-    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Project Structure
+## 📄 License
 
-- `src/components/Quiz.js`: Core logic for state management and validation.
-- `src/components/Results.js`: algorithm for calculating the communication style profile.
-- `src/i18n.js`: Configuration for language translation resources.
+Created by **Prof. Leandro Jr.**
+Educational use only.
 
 ---
 
-_Created by Prof. Leandro Jr_
+_v1.0.0 - "The Negotiator Edition"_

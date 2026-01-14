@@ -288,3 +288,31 @@ footer p {
     font-size: 0.9rem;
   }
 }
+
+/* carousel */
+/* Carousel Container - Holds the space */
+.carousel-frame {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Adjust based on your art size */
+  height: 300px; /* Adjust based on your art aspect ratio */
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centers the image horizontally */
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures art doesn't stretch weirdly */
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* The smooth fade magic */
+}
+
+.carousel-image.active {
+  opacity: 1;
+  z-index: 2;
+}

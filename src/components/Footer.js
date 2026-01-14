@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="app-footer">
       <p>
-        &copy; {new Date().getFullYear()} Prof. Leandro Jr. |
+        &copy; {new Date().getFullYear()} Prof. Leandro Jr. |<span> </span>
         <a
           href="https://github.com/profleandrojr"
           target="_blank"
@@ -18,7 +18,6 @@ const Footer = () => {
         </a>
       </p>
 
-      {/* Credit Section */}
       <p className="credits">
         Based on the work of <strong>Luis Gerald Riffo</strong> (Advanced
         Negotiation Techniques).
