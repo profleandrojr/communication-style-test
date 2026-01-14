@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/communication-style-quiz/static/css/main.91c82d81.css",
+    "main.css": "/communication-style-quiz/static/css/main.779d9a70.css",
     "main.js": "/communication-style-quiz/static/js/main.f10c90d7.js",
-    "static/media/background-jellyfish.png": "/communication-style-quiz/static/media/background-jellyfish.e6d69dbf1b03aaed7bf1.png",
+    "static/media/background-jellyfish.png": "/communication-style-quiz/static/media/background-jellyfish.759cdf0b2773288a4c10.png",
     "index.html": "/communication-style-quiz/index.html",
-    "main.91c82d81.css.map": "/communication-style-quiz/static/css/main.91c82d81.css.map",
+    "main.779d9a70.css.map": "/communication-style-quiz/static/css/main.779d9a70.css.map",
     "main.f10c90d7.js.map": "/communication-style-quiz/static/js/main.f10c90d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.91c82d81.css",
+    "static/css/main.779d9a70.css",
     "static/js/main.f10c90d7.js"
   ]
 }

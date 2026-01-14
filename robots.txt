@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap: https://profleandrojr.github.io/communication-style-quiz/sitemap.xml
